@@ -32,14 +32,15 @@ module.exports = function () {
         if (moduleName === 'normalize') { return }
 
         var newRow = '<tr>' +
-          '<td class="bb b--black-10 pv3">' +'<pre class="f5">' + rule.selector + '</pre>'+'</td>' +
-          '<td class="bb b--black-10 pv3">' + '<pre class=f5">' +
+          '<td class="bb b--black-05 pv3">' +'<pre class="f6 f5-l">' + rule.selector + '</pre>'+'</td>' +
+          '<td class="bb b--black-05 pv3 mw6">' +
+          '<pre class="f6 f5-l" style="white-space:pre-wrap; word-wrap:break-word;">' +
             rule.nodes.map(function (decl) {
               return  decl.prop + ':' + decl.value
             }).join('<br>') +
           '</pre>' +
           '</td>' +
-          '<td class="bb b--black-05 pv2"><a class="link blue dim f6" href="https://github.com/tachyons-css/tachyons-' + moduleName +'">' + moduleName + '</a></td>' +
+          '<td class="bb b--black-05 pv2"><a class="link blue dim f6 f5-l" href="https://github.com/tachyons-css/tachyons-' + moduleName +'" title="'+moduleName+'">' + moduleName + '</a></td>' +
         '</tr>'
 
         tableData += newRow
@@ -51,18 +52,18 @@ module.exports = function () {
     atImport(), removeComments(), getTrs()
   ]).process(tachyonsCss, {
     from: 'src/css/tachyons.css'
-  }).css
+  }).then(function () {
+    var compiledPage = _.template(template)({
+      name: 'Table of Styles',
+      tableData: tableData,
+      navDocs: navDocs,
+      siteFooter: siteFooter,
+      googleAnalytics: googleAnalytics,
+      head: head,
+      siteHeader: siteHeader
+    })
 
-  var compiledPage = _.template(template)({
-    name: 'Table of Styles',
-    tableData: tableData,
-    navDocs: navDocs,
-    siteFooter: siteFooter,
-    googleAnalytics: googleAnalytics,
-    head: head,
-    siteHeader: siteHeader
+    mkdirp.sync('docs/table-of-styles')
+    fs.writeFileSync('docs/table-of-styles/index.html', compiledPage)
   })
-
-  mkdirp.sync('docs/table-of-styles')
-  fs.writeFileSync('docs/table-of-styles/index.html', compiledPage)
 }

@@ -1,7 +1,7 @@
 /*
 
    FORMS
-
+   
 */
 
 .input-reset {
@@ -9,8 +9,8 @@
   -moz-appearance: none;
 }
 
-.input-invisible {
-  outline: 0;
+.button-reset::-moz-focus-inner,
+.input-reset::-moz-focus-inner {
   border: 0;
+  padding: 0;
 }
-

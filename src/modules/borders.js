@@ -11,7 +11,10 @@ var moduleObj = cssstats(moduleCss)
 var moduleSize = filesize(moduleObj.gzipSize)
 var moduleName = module.name
 
-var srcCSS = fs.readFileSync('./src/css/_borders.css', 'utf8')
+var srccss = fs.readFileSync('./src/css/_borders.css', 'utf8')
+var srccss2 = fs.readFileSync('./src/css/_border-colors.css', 'utf8')
+var srccss3 = fs.readFileSync('./src/css/_border-style.css', 'utf8')
+var srccss4 = fs.readFileSync('./src/css/_border-widths.css', 'utf8')
 var navDocs = fs.readFileSync('./src/templates/nav_docs.html', 'utf8')
 var siteFooter = fs.readFileSync('./src/templates/footer.html', 'utf8')
 var siteHeader = fs.readFileSync('./src/templates/header.html', 'utf8')
@@ -25,7 +28,10 @@ var html = tpl({
   moduleSize: moduleSize,
   name: moduleName,
   moduleObj: moduleObj,
-  srcCSS: srcCSS,
+  srccss: srccss,
+  srccss2: srccss2,
+  srccss3: srccss3,
+  srccss4: srccss4,
   navDocs: navDocs,
   siteFooter: siteFooter,
   googleAnalytics: googleAnalytics,

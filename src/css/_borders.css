@@ -1,18 +1,23 @@
-@custom-media --breakpoint-not-small screen and (min-width: 48em);
-@custom-media --breakpoint-medium screen and (min-width: 48em) and (max-width: 64em);
-@custom-media --breakpoint-large screen and (min-width: 64em);
-
 /*
 
-   BORDER BASE
+    BORDERS
+    Docs: http://tachyons.io/docs/themes/borders/
 
-   Legend
+    Base:
+      b = border
 
-   a = all
-   t = top
-   r = right
-   b = bottom
-   l = left
+    Modifiers:
+      a = all
+      t = top
+      r = right
+      b = bottom
+      l = left
+      n = none
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
 
 */
 
@@ -21,6 +26,8 @@
   .br { border-right-style: solid; border-right-width: 1px; }
   .bb { border-bottom-style: solid; border-bottom-width: 1px; }
   .bl { border-left-style: solid; border-left-width: 1px; }
+  .bn { border-style: none; border-width: 0; }
+
 
 @media (--breakpoint-not-small) {
   .ba-ns { border-style: solid; border-width: 1px; }
@@ -28,6 +35,7 @@
   .br-ns { border-right-style: solid; border-right-width: 1px; }
   .bb-ns { border-bottom-style: solid; border-bottom-width: 1px; }
   .bl-ns { border-left-style: solid; border-left-width: 1px; }
+  .bn-ns { border-style: none; border-width: 0; }
 }
 
 @media (--breakpoint-medium) {
@@ -36,6 +44,7 @@
   .br-m { border-right-style: solid; border-right-width: 1px; }
   .bb-m { border-bottom-style: solid; border-bottom-width: 1px; }
   .bl-m { border-left-style: solid; border-left-width: 1px; }
+  .bn-m { border-style: none; border-width: 0; }
 }
 
 @media (--breakpoint-large) {
@@ -44,5 +53,6 @@
   .br-l { border-right-style: solid; border-right-width: 1px; }
   .bb-l { border-bottom-style: solid; border-bottom-width: 1px; }
   .bl-l { border-left-style: solid; border-left-width: 1px; }
+  .bn-l { border-style: none; border-width: 0; }
 }
 

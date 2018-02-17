@@ -1,6 +1,7 @@
 /*
 
    FONT FAMILY GROUPS
+   Docs: http://tachyons.io/docs/typography/font-family/
 
 */
 
@@ -8,8 +9,9 @@
 .sans-serif {
   font-family: -apple-system, BlinkMacSystemFont,
                'avenir next', avenir,
-               helvetica, 'helvetica neue',
-               Ubuntu,
+               'helvetica neue', helvetica,
+               ubuntu,
+               roboto, noto,
                'segoe ui', arial,
                sans-serif;
 }
@@ -38,17 +40,33 @@ code, .code {
                monospace;
 }
 
+.courier {
+  font-family: 'Courier Next',
+               courier,
+               monospace;
+}
+
 
 /* Sans-Serif Typefaces */
 
 .helvetica {
-  font-family:  helvetica, 'helvetica neue',
-                arial,
-                sans-serif;
+  font-family: 'helvetica neue', helvetica,
+               sans-serif;
+}
+
+.avenir {
+  font-family: 'avenir next', avenir,
+               sans-serif;
 }
 
 
 /* Serif Typefaces */
+
+.athelas {
+  font-family: athelas,
+               georgia,
+               serif;
+}
 
 .georgia {
   font-family: georgia,
@@ -56,7 +74,7 @@ code, .code {
 }
 
 .times {
-  font-family: Times,
+  font-family: times,
                serif;
 }
 
@@ -72,6 +90,11 @@ code, .code {
 
 .garamond {
   font-family: garamond,
+               serif;
+}
+
+.baskerville {
+  font-family: baskerville,
                serif;
 }
 

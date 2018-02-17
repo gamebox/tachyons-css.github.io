@@ -1,6 +1,5 @@
 /* Variables */
 
-/* Spacing Scale - based on a ratio of 1:2 */
 :root {
   --spacing-none: 0;
   --spacing-extra-small: .25rem;
@@ -12,39 +11,38 @@
   --spacing-extra-extra-extra-large: 16rem;
 }
 
-/* Media Queries */
-
-@custom-media --breakpoint-not-small screen and (min-width: 48em);
-@custom-media --breakpoint-medium screen and (min-width: 48em) and (max-width: 64em);
-@custom-media --breakpoint-large screen and (min-width: 64em);
-
 /*
    SPACING
+   Docs: http://tachyons.io/docs/layout/spacing/
 
    An eight step powers of two scale ranging from 0 to 16rem.
-   Namespaces are composab4e and thus high4y grockab4e - check the legend below
 
-   Legend:
+   Base:
+     p = padding
+     m = margin
 
-   p = padding
-   m = margin
+   Modifiers:
+     a = all
+     h = horizontal
+     v = vertical
+     t = top
+     r = right
+     b = bottom
+     l = left
 
-   a = all
-   h = horizontal
-   v = vertical
-   t = top
-   r = right
-   b = bottom
-   l = left
+     0 = none
+     1 = 1st step in spacing scale
+     2 = 2nd step in spacing scale
+     3 = 3rd step in spacing scale
+     4 = 4th step in spacing scale
+     5 = 5th step in spacing scale
+     6 = 6th step in spacing scale
+     7 = 7th step in spacing scale
 
-   0 = none
-   1 = 1st step in spacing scale
-   2 = 2nd step in spacing scale
-   3 = 3rd step in spacing scale
-   4 = 4th step in spacing scale
-   5 = 5th step in spacing scale
-   6 = 6th step in spacing scale
-   7 = 7th step in spacing scale
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
 
 */
 
@@ -215,7 +213,7 @@
 
 .mv0   {
   margin-top: var(--spacing-none);
-  margin-bottom: var(--spacing-none)rem;
+  margin-bottom: var(--spacing-none);
 }
 .mv1  {
   margin-top: var(--spacing-extra-small);
@@ -249,6 +247,10 @@
 .mh0   {
   margin-left: var(--spacing-none);
   margin-right: var(--spacing-none);
+}
+.mh1   {
+  margin-left: var(--spacing-extra-small);
+  margin-right: var(--spacing-extra-small);
 }
 .mh2   {
   margin-left: var(--spacing-small);
@@ -357,7 +359,7 @@
     padding-left: var(--spacing-none);
     padding-right: var(--spacing-none);
   }
-  .pv1-ns {
+  .ph1-ns {
     padding-left: var(--spacing-extra-small);
     padding-right: var(--spacing-extra-small);
   }
@@ -433,7 +435,7 @@
 
   .mv0-ns   {
     margin-top: var(--spacing-none);
-    margin-bottom: var(--spacing-none)rem;
+    margin-bottom: var(--spacing-none);
   }
   .mv1-ns  {
     margin-top: var(--spacing-extra-small);
@@ -464,34 +466,38 @@
     margin-bottom: var(--spacing-extra-extra-extra-large);
   }
 
-   .mh0-ns   {
-     margin-left: var(--spacing-none);
-     margin-right: var(--spacing-none);
-   }
-   .mh2-ns   {
-     margin-left: var(--spacing-small);
-     margin-right: var(--spacing-small);
-   }
-   .mh3-ns   {
-     margin-left: var(--spacing-medium);
-     margin-right: var(--spacing-medium);
-   }
-   .mh4-ns   {
-     margin-left: var(--spacing-large);
-     margin-right: var(--spacing-large);
-   }
-   .mh5-ns   {
-     margin-left: var(--spacing-extra-large);
-     margin-right: var(--spacing-extra-large);
-   }
-   .mh6-ns  {
-     margin-left: var(--spacing-extra-extra-large);
-     margin-right: var(--spacing-extra-extra-large);
-   }
-   .mh7-ns  {
-     margin-left: var(--spacing-extra-extra-extra-large);
-     margin-right: var(--spacing-extra-extra-extra-large);
-   }
+  .mh0-ns   {
+    margin-left: var(--spacing-none);
+    margin-right: var(--spacing-none);
+  }
+  .mh1-ns   {
+    margin-left: var(--spacing-extra-small);
+    margin-right: var(--spacing-extra-small);
+  }
+  .mh2-ns   {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+  .mh3-ns   {
+    margin-left: var(--spacing-medium);
+    margin-right: var(--spacing-medium);
+  }
+  .mh4-ns   {
+    margin-left: var(--spacing-large);
+    margin-right: var(--spacing-large);
+  }
+  .mh5-ns   {
+    margin-left: var(--spacing-extra-large);
+    margin-right: var(--spacing-extra-large);
+  }
+  .mh6-ns  {
+    margin-left: var(--spacing-extra-extra-large);
+    margin-right: var(--spacing-extra-extra-large);
+  }
+  .mh7-ns  {
+    margin-left: var(--spacing-extra-extra-extra-large);
+    margin-right: var(--spacing-extra-extra-extra-large);
+  }
 
 }
 
@@ -578,7 +584,7 @@
     padding-left: var(--spacing-none);
     padding-right: var(--spacing-none);
   }
-  .pv1-m {
+  .ph1-m {
     padding-left: var(--spacing-extra-small);
     padding-right: var(--spacing-extra-small);
   }
@@ -654,7 +660,7 @@
 
   .mv0-m {
     margin-top: var(--spacing-none);
-    margin-bottom: var(--spacing-none)rem;
+    margin-bottom: var(--spacing-none);
   }
   .mv1-m {
     margin-top: var(--spacing-extra-small);
@@ -879,7 +885,7 @@
 
   .mv0-l {
     margin-top: var(--spacing-none);
-    margin-bottom: var(--spacing-none)rem;
+    margin-bottom: var(--spacing-none);
   }
   .mv1-l {
     margin-top: var(--spacing-extra-small);

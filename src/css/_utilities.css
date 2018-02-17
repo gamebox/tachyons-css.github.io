@@ -2,28 +2,14 @@
 
    UTILITIES
 
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
 */
 
-.aspect-ratio {
-  height: 0;
-  position: relative;
-}
-
-.aspect-ratio--16x9 { padding-bottom: 56.25%; }
-.aspect-ratio--4x3 {  padding-bottom: 75%; }
-.aspect-ratio--8x5 {  padding-bottom: 62.5%; }
-
-.aspect-ratio--object {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
+/* Equivalent to .overflow-y-scroll */
 .overflow-container {
   overflow-y: scroll;
 }
@@ -31,4 +17,34 @@
 .center {
   margin-right: auto;
   margin-left: auto;
+}
+
+.mr-auto { margin-right: auto; }
+.ml-auto { margin-left:  auto; }
+
+@media (--breakpoint-not-small){
+  .center-ns {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .mr-auto-ns { margin-right: auto; }
+  .ml-auto-ns { margin-left:  auto; }
+}
+
+@media (--breakpoint-medium){
+  .center-m {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .mr-auto-m { margin-right: auto; }
+  .ml-auto-m { margin-left:  auto; }
+}
+
+@media (--breakpoint-large){
+  .center-l {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .mr-auto-l { margin-right: auto; }
+  .ml-auto-l { margin-left:  auto; }
 }

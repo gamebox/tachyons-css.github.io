@@ -11,6 +11,14 @@
 <style>
   .blue { color: #0074D9; }
   .bg-blue { background-color: #0074D9; }
+
+  .carbon-poweredby { width: 100%; font-size: 12px; float: left; }
+  .carbon-wrap { float: left; width: 100%; box-sizing: border-box; }
+  .carbon-img  { float: left; width: 50%;  box-sizing: border-box; }
+  .carbon-text  { float: left; width: 50%; padding-left: 16px; box-sizing: border-box; font-size: 12px; }
+
+  #carbonads a:link { text-decoration: none!important; color: #222!important; }
+
 </style>
 
 </head>
@@ -24,14 +32,13 @@
   </div>
 </article>
 
-  <section data-name="component-info" class="pa3 pa5-ns bt b--black-10 black-70" style="background: #fafafa;">
+  <section data-name="component-info" class="pa3 pa5-ns bt b--black-10 black-70 bg-washed-blue">
   <h1 class="f4 f3-ns mt4">Profile Card Title Subtitle</h1>
-
 <div class="cf">
 <div class="fl w-100 w-75-ns pr0 pr2-ns">
 <h2 class="f5">HTML</h2>
 <p class="f5 black-70"></p>
-<pre class="pa3 ba br2 b--black-05 h5" id="html">
+<pre class="pa3 ba br2 b--black-10 h5 bg-white-20" id="html">
 &lt;article class=&quot;mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10&quot;&gt;
   &lt;div class=&quot;tc&quot;&gt;
     &lt;img src=&quot;/img/avatar_1.jpg&quot; class=&quot;br-100 h4 w4 dib ba b--black-05 pa2&quot; title=&quot;Kitty staring at you&quot;&gt;
@@ -43,8 +50,8 @@
 </pre>
 </div>
 <div class="fl w-100 w-25-ns pl0 pl2-ns">
-<h2 class="f5">CSS</h2>
-<pre class="pa3 ba br2 b--black-05 h5" id="css">.ba {
+<h2 class="f5">css</h2>
+<pre class="pa3 ba br2 b--black-10 h5" id="css">.ba {
     border-style: solid;
     border-width: 1px;
 }
@@ -131,7 +138,7 @@
     margin-left: auto;
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 30em) {
     .pa4-ns {
         padding: 2rem;
     }
@@ -142,10 +149,10 @@
 </div>
 <div class="cf">
   <div class="fl w-100">
-    <h2 class="f5 mb3 mt4">CSS Stats for this Component</h2>
+    <h2 class="f5 mb3 mt4">Css stats for this component</h2>
     <dl class="dib mr4 mt0">
       <dt class="db f6">Gzipped Size</dt>
-      <dd class="ml0 b f3 f2-ns">371<small class="f6">B</small>
+      <dd class="ml0 b f3 f2-ns">370<small class="f6">B</small>
       </dd>
     </dl>
     <dl class="dib mr4 mt0">
@@ -203,6 +210,8 @@
     <div>
       <h2 class="f5 mb2 ttc mid-gray">articles</h2>
       
+        <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/articles/full-bleed-background/index.html">Full Bleed Background</a>
+      
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/articles/large-title-text/index.html">Large Title Text</a>
       
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/articles/left-title-top-border/index.html">Left Title Top Border</a>
@@ -212,6 +221,15 @@
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/articles/title-text-image/index.html">Title Text Image</a>
       
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/articles/title-text/index.html">Title Text</a>
+      
+    </div>
+  
+    <div>
+      <h2 class="f5 mb2 ttc mid-gray">cards</h2>
+      
+        <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/cards/album-centered/index.html">Album Centered</a>
+      
+        <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/cards/album-left/index.html">Album Left</a>
       
     </div>
   
@@ -232,6 +250,8 @@
   
     <div>
       <h2 class="f5 mb2 ttc mid-gray">footers</h2>
+      
+        <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/footers/simple-large-type/index.html">Simple Large Type</a>
       
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/footers/small-print/index.html">Small Print</a>
       
@@ -286,6 +306,10 @@
       
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/lists/links-with-borders-inline/index.html">Links With Borders Inline</a>
       
+        <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/lists/slab-stat-large/index.html">Slab Stat Large</a>
+      
+        <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/lists/slab-stat-small/index.html">Slab Stat Small</a>
+      
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/lists/slab-stat/index.html">Slab Stat</a>
       
         <a class="f5 dib mr3 mb2 blue link dim fw6" href="/components/lists/title-text/index.html">Title Text</a>
@@ -329,8 +353,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
+  color: #111;
+  color: rgba(0,0,0,.7);
+  background-color: #fff;
+  background-color: rgba(255,255,255,.2);
 }
 
 .hljs-comment,
@@ -351,12 +377,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: #006C71;
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: #C64774;
 }
 
 .hljs-title,
@@ -379,7 +405,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
-  color: #000080;
+  color: #00449E;
   font-weight: normal;
 }
 
@@ -420,8 +446,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 }
 </style>
 
-  <footer class="bg-near-white mid-gray ph3 ph5-ns pv5 pv6-ns bt b--black-10">
-  <a href="https://twitter.com/intent/tweet?text=Tachyons: Functional CSS for Humans.&url=http://tachyons.io" target="_blank" class="dn mb3 twitter bg-white link dim br2 ph2 pb1 pt0 lh-solid" style="background-color: #55acee;">
+  <footer class="bg-washed-blue black-70 ph3 ph5-ns pv5 pv6-ns bt b--black-10">
+  <a href="https://twitter.com/intent/tweet?text=Tachyons: Functional css for humans.&url=http://tachyons.io" target="_blank" class="dn mb3 twitter bg-white-50 link dim br2 ph2 pb1 pt0 lh-solid" style="background-color: #55acee;">
     <svg class="geomicon dib v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="#fff">
       <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"/>
     </svg>
@@ -443,14 +469,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <iframe src="https://ghbtns.com/github-btn.html?user=tachyons-css&repo=tachyons&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
   </article>
   <div class="mt4">
-    <a class="black-70 link dim b dib mr3 pv2" href="http://tachyons-slack-invite.herokuapp.com" title="Join our Slack Channel">
+    <a class="ba black-70 link br2 dim b dib mr3 mb3 pv2 ph3" href="http://tachyons-slack-invite.herokuapp.com" title="Join our Slack Channel">
       Join our Slack Channel
     </a>
-    <a class="black-70 link dim b dib mr3 pv2" href="https://github.com/tachyons-css/tachyons/issues" title="File a bug, request a feature, ask a question!">
+    <a class="ba br2 black-70 link dim b dib pv2 ph3  mb3" href="https://github.com/tachyons-css/tachyons/issues" title="File a bug, request a feature, ask a question!">
       Open an Issue
-    </a>
-    <a class="black-70 link dim b dib mr3 pv2" href="https://github.com/tachyons-css" title="Tachyons-css on GitHub">
-      GitHub
     </a>
   </div>
   <p class="measure copy lh-copy">
@@ -458,6 +481,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     question in our slack channel. We're here to try and help make designing in
     the browser fun.
   </p>
+  <div class="pt4 cf mw5">
+    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=tachyonsio" id="_carbonads_js"></script>
+  </div>
   <small class="f6 measure db lh-copy mt5">
     A tachyon /ˈtæki.ɒn/ or tachyonic particle is a hypothetical particle
     that always moves faster than light.
@@ -465,6 +491,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <br> <br>
     ταχύς or tachys, meaning "swift, quick, fast, rapid"
   </small>
+
 </footer>
 
       <script>
